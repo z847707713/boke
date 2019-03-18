@@ -11,20 +11,24 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="/common/files/index.css" media="all">
+
+    <!-- 只包含paginator 的样式 -->
+    <link rel="stylesheet" type="text/css" href="/common/bootstrap-3.3.7/css/bootstrap.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/common/plugin/bootstrap-paginator/bootstrap-paginator.min.js" ></script>
 </head>
 
 <body class="home blog custom-background round-avatars" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
 <div class="Yarn_Background" style="background-image: url( /common/statics/images/47fb3c_.jpg);"></div>
-<form class="js-search search-form search-form--modal" method="get" action="http://yanshi.sucaihuo.com/modals/43/4341/demo/search.html" role="search">
+<form class="js-search search-form search-form--modal" method="post" action="/search" role="search">
     <div class="search-form__inner">
         <div>
             <div id="search-container" class="ajax_search">
-
-                <div class="filter_container"><input type="text" value="" autocomplete="off" placeholder="Type then select or enter" name="s" id="search-input">
+                <div class="filter_container"><input type="text" value="" autocomplete="off" placeholder="Type then select or enter" name="title" id="search-input">
                     <ul id="search_filtered" class="search_filtered"></ul>
                 </div>
                 <input type="submit" name="submit" id="searchsubmit" class="searchsubmit" value="">
-
             </div>
         </div>
     </div></form>
@@ -42,7 +46,7 @@
                     <div class="menu-menu-container">
                         <ul id="primary-menu" class="menu">
                             <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17">
-                                <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/index.html">首页</a>
+                                <a href="/">首页</a>
                             </li>
                             <li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
                                 <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/update.html">更新</a>
@@ -123,7 +127,7 @@
                                     <c:if test="${i.type == 0}">
                                         <div class="status_user" style="background-image: url(${i.url});">
                                             <div class="status_section">
-                                                <a href="" class="status_btn">${e.title}</a>
+                                                <a href="/detail/${e.id}" class="status_btn">${e.title}</a>
                                                 <p class="section_p">${e.outline}</p>
                                             </div>
                                         </div>
@@ -141,7 +145,7 @@
                                             <c:forEach items="${e.articlePhotos}" var="i">
                                                 <c:if test="${i.type == 0}">
                                                     <c:set var="url" value="${i.url}"></c:set>
-                                                    <a rel="nofollow" href="">
+                                                    <a rel="nofollow" href="/detail/${e.id}">
                                                         <div class="review-item-img" style="background-image: url(${url});"></div>
                                                     </a>
                                                 </c:if>
@@ -149,7 +153,7 @@
                                         </div>
                                         <div class="col-sm-9 flex-xs-middle">
                                             <div class="review-item-title">
-                                                <a href="" rel="bookmark">${e.title}</a>
+                                                <a href="/detail/${e.id}" rel="bookmark">${e.title}</a>
                                             </div>
                                             <div class="review-item-creator"><b>发布日期：</b><fmt:formatDate value="${e.createTime}" pattern="yyyy-MM-dd "/> </div>
                                             <span class="review-item-info"><b>总浏览量：</b>${e.pageView} reads</span>
@@ -163,7 +167,7 @@
                                     <div class="entry-content">${e.outline}</div>
 
                                     <div class="post-footer">
-                                        <a class="gaz-btn primary" href="">READ MORE</a>
+                                        <a class="gaz-btn primary" href="/detail/${e.id}">READ MORE</a>
                                         <span class="total-comments-on-post pull-right"><a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">31 Comments</a></span>
                                     </div>
                                 </div>
@@ -179,7 +183,7 @@
                                                    <div class="bg" style="background-image: url(/common/statics/images/IMG_0150.jpg);"></div>
                                                     <div class="contentext flex-xs-middle">
                                                         <div class="album-title">
-                                                        <a href="">${e.title}</a>
+                                                        <a href="/detail/${e.id}">${e.title}</a>
                                                         </div>
                                                        <h5 class="review-item-creator"><b>发布日期：</b><fmt:formatDate value="${e.createTime}" pattern="yyyy-MM-dd" /></h5>
                                                      <div class="album-content">${e.outline}</div>
@@ -206,131 +210,80 @@
                 </c:forEach>
 
 
-                <div class="post post-layout-list aos-init aos-animate" data-aos="fade-up">
-                    <div class="status_list_item icon_kyubo">
-                        <div class="status_user" style="background-image: url(/common/statics/images/b0ce3f3cde0c084b6d42321b2dcbc407.jpeg);">
-                            <div class="status_section">
-                                <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html" class="status_btn">交代是不可能交代的</a>
-                                <p class="section_p">相隔上一次的更新我掰手指数一数，下意识的双腿一软，给各位小哥哥小姐姐们跪下了。自从有了对象后，周末几乎落下了主题的进度（邪魅的笑）。一边开发新的主题，一边收集您们给我反馈回来的"臭虫"，还有新的主题后台看见了一些大神在... </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="post post-layout-list aos-init" data-aos="fade-up">
-                    <div class="postnormal review ">
-                        <div class="post-container review-item">
-                            <div class="row review-item-wrapper">
-                                <div class="col-sm-3">
-                                    <a rel="nofollow" href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html">
-                                        <div class="review-item-img" style="background-image: url(/common/statics/images/diego-ph-249471-2-800x1000.jpg);"></div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-9 flex-xs-middle">
-                                    <div class="review-item-title">
-                                        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html" rel="bookmark">我才不会写年终总结之瞎说篇</a>
-                                    </div>
-                                    <div class="review-item-creator"><b>发布日期：</b>2017-12-30</div>
-                                    <span class="review-item-info"><b>总浏览量：</b>1203 reads</span>
-                                </div>
-                            </div>
-                            <div class="review-bg-wrapper">
-                                <div class="bg-blur" style="background-image: url(/common/statics/images/diego-ph-249471-2-800x1000.jpg);"></div>
-                            </div>
-                        </div>
-                        <div class="post-container">
-                            <div class="entry-content">确实讨厌去写所谓的年终总结，在公司已经被动的想领导上交一个总结，自己就懒得去总结，不然，我觉得脑子里应该会编写出八九不离十的内容，所以正经八儿的事情略了，瞎说一下。 年初的人事调动是个人最不能接受的事情，但不接受也得接受，老板一句“这是命令...</div>
-                            <div class="post-footer">
-                                <a class="gaz-btn primary" href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">READ MORE</a>
-                                <span class="total-comments-on-post pull-right"><a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">31 Comments</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="post post-layout-list aos-init" data-aos="fade-up">
-                    <div class="status_list_item icon_kyubo">
-                        <div class="status_user" style="background-image: url(/common/statics/images/b0ce3f3cde0c084b6d42321b2dcbc407.jpeg);">
-                            <div class="status_section">
-                                <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html" class="status_btn">状态</a>
-                                <p class="section_p">因为我这后半年飘忽不定的更新节奏，感觉真的对不住用户。最近才松下来能处理反馈的bug，顺便加快新主题 Dcras 的制作，农历年后或许能上线，准确时间，不敢说-- 为了感谢大家对 Yarn 的支持，Dcras 会以 获兑现码半价的承诺 给 Yarn ... </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="post post-layout-list js-gallery aos-init" data-aos="fade-up">
-                    <div class="post-album">
-                        <div class="row content">
-                            <div class="bg" style="background-image: url(/common/statics/images/IMG_0150.jpg);"></div>
-                            <div class="contentext flex-xs-middle">
-                                <div class="album-title">
-                                    <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html">重构图像样式测试</a>
-                                </div>
-                                <h5 class="review-item-creator"><b>发布日期：</b>2017-11-13</h5>
-                                <div class="album-content">如眼所见是一个图像样式，必须写五十左右的文字作为这个文本框的空白填充，不写也是可以的，强迫症不能容忍空白。</div>
-                            </div>
-                            <div class="album-thumb-width flex-xs-middle">
-                                <div class="row album-thumb no-gutter">
-                                    <div class="col-xs-4"><img class="thumb" src="/common/files/IMG_0150-250x250.jpg"></div>
-                                    <div class="col-xs-4"><img class="thumb" src="/common/files/IMG_0149-250x250.jpg"></div>
-                                    <div class="col-xs-4"><img class="thumb" src="/common/files/IMG_0146-250x250.jpg"></div>
-                                    <div class="col-xs-4"><img class="thumb" src="/common/files/IMG_0147-250x250.jpg"></div>
-                                    <div class="col-xs-4"><img class="thumb" src="/common/files/IMG_0148-250x250.jpg"></div>
-                                    <div class="col-xs-4">
-                                        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">5 pics</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="post post-layout-list aos-init" data-aos="fade-up">
-                    <div class="postnormal review ">
-                        <div class="post-container review-item">
-                            <div class="row review-item-wrapper">
-                                <div class="col-sm-3">
-                                    <a rel="nofollow" href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html">
-                                        <div class="review-item-img" style="background-image: url(/common/statics/images/47fb3c_9afed6c259f94589881bd55376206366mv2_d_3840_5784_s_4_2-800x450.jpg);"></div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-9 flex-xs-middle">
-                                    <div class="review-item-title">
-                                        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html" rel="bookmark">给大家介绍一下</a>
-                                    </div>
-                                    <div class="review-item-creator"><b>发布日期：</b>2017-10-02</div>
-                                    <span class="review-item-info"><b>总浏览量：</b>1600 reads</span>
-                                </div>
-                            </div>
-                            <div class="review-bg-wrapper">
-                                <div class="bg-blur" style="background-image: url(/common/statics/images/47fb3c_9afed6c259f94589881bd55376206366mv2_d_3840_5784_s_4_2-800x450.jpg);"></div>
-                            </div>
-                        </div>
-                        <div class="post-container">
-                            <div class="entry-content">现在的明星的影响力足以影响国内娱乐圈的"半壁江山"，发条微博，新浪都恐慌好几天，来来来，蹭个热点给大家介绍一下我的女朋友。</div>
-                            <div class="post-footer">
-                                <a class="gaz-btn primary" href="http://yanshi.sucaihuo.com/modals/43/4341/demo/detail.html">READ MORE</a>
-                                <span class="total-comments-on-post pull-right"><a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">30 Comments</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <!-- post-formats end Infinite Scroll star -->
             <!-- post-formats -->
-            <div class="pagination js-pagination">
-                <div class="js-next pagination__load">
-                    <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/"><i class="iconfont"></i></a>
-                </div>
-            </div>
+
+            <style>
+                .pagination li{
+                    text-align: center;
+                    float: left;
+                    display: block;
+                }
+                li a{
+                    display: inline-block;
+                    padding: 0 8px;
+                    color: #666;
+                }
+                li a:active{
+                    color: rgb(235,235,235);
+                }
+
+                .modify{
+                    color:white;
+                }
+
+                #pageLimit li{
+                    float: left;
+                }
+
+            </style>
+
+
+            <script>
+                var totalPage = 10
+                $(function(){
+                    var options = {
+                        currentPage: 1,//当前的请求页面。
+                        totalPages: totalPage,//一共多少页。
+                        size:"normal",//应该是页眉的大小。
+                        bootstrapMajorVersion: 3,//bootstrap的版本要求。
+                        alignment:"right",
+                        numberOfPages: 5,//设置控件显示的页码数量.即：类型为"page"的操作按钮的数量。
+                        itemTexts: function (type, page, current) {//如下的代码是将页眉显示的中文显示我们自定义的中文。
+                            switch (type) {
+                                case "first": return "首页";
+                                case "prev": return "上一页";
+                                case "next": return "下一页";
+                                case "last": return "末页";
+                                case "page": return page;
+                            }
+                        },//点击事件
+                        onPageClicked:function(event,originalEvent, type,page){
+                            //loadPage(page)
+                            $(".pagination .active").addClass("modify");
+                            $("#pageLimit").parent().css("width",500);
+                            resize();
+                        }
+                    };
+                    $('#pageLimit').bootstrapPaginator(options);
+                    resize();
+                })
+
+                function resize() {
+                    var width = $("#pageLimit").width();
+                    $("#pageLimit").parent().css("width",width);
+                }
+
+            </script>
+
             <!-- -pagination  -->
-        </article></div>
+        </article>
+                <div style="margin: 0 auto;width:448px;">
+                    <ul id="pageLimit" >
+                    </ul>
+                </div>
+    </div>
 </div>
 
 <footer id="footer" class="overlay animated from-top">
@@ -362,7 +315,7 @@
         Copyright©2018. Design by
         <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">sucaihuo</a>
     </div>
-    <script type="text/javascript" src="/common/files/jquery.min.js"></script>
+
     <script type="text/javascript" src="/common/files/plugins.js"></script>
     <script type="text/javascript" src="/common/files/script.js"></script>
     <script type="text/javascript" src="/common/files/particles.js"></script>

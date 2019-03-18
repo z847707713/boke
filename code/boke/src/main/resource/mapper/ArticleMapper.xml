@@ -87,6 +87,20 @@
       select * from article
   </select>
 
+  <select id="getNextById" resultType="cn.lovehao.entity.Article">
+      select id,title from article
+        where id = (select min(id) from article where id &gt; #{id} )
+  </select>
+  <select id="getPreviousById" resultType="cn.lovehao.entity.Article">
+      select id,title from article where id = (select max(id) from article where id &lt; #{id} )
+  </select>
+
+
+  <select id="getPhotoUrlById" resultType="java.lang.String">
+     select url from article_photo where article_id = #{id}
+       and type = 0
+  </select>
+
 
   <insert id="insertSelective" parameterType="cn.lovehao.entity.Article">
     insert into article

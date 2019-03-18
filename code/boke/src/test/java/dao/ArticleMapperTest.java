@@ -43,4 +43,14 @@ public class ArticleMapperTest {
         System.out.println(articleDtos);
     }
 
+
+    @Test
+    public void NextAndpre(){
+        Article next = articleMapper.getNextById(1);
+        System.out.println(next);
+        Article pre = articleMapper.getPreviousById(3);
+        System.out.println(pre);
+    }
+
+
 }

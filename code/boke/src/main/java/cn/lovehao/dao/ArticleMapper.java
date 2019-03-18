@@ -1,5 +1,6 @@
 package cn.lovehao.dao;
 
+import cn.lovehao.dto.ArticleDetailsDto;
 import cn.lovehao.dto.ArticleDto;
 import cn.lovehao.entity.Article;
 import com.github.pagehelper.Page;
@@ -24,4 +25,11 @@ public interface ArticleMapper {
     List<ArticleDto> selectArticleDtos();
 
     List<Article> selectAll();
+
+    Article getNextById(Integer id);
+
+    Article getPreviousById(Integer id);
+
+    String getPhotoUrlById(Integer id);
+
 }
