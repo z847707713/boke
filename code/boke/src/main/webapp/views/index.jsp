@@ -1,122 +1,56 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page isELIgnored="false" %>
-<!DOCTYPE html>
-<!-- saved from url=(0047)http://yanshi.sucaihuo.com/modals/43/4341/demo/ -->
-<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>响应式简单个性个人博客模板</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="stylesheet" type="text/css" href="/common/files/index.css" media="all">
-
-    <!-- 只包含paginator 的样式 -->
-    <link rel="stylesheet" type="text/css" href="/common/bootstrap-3.3.7/css/bootstrap.min.css">
-
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="/common/plugin/bootstrap-paginator/bootstrap-paginator.min.js" ></script>
-</head>
-
-<body class="home blog custom-background round-avatars" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-<div class="Yarn_Background" style="background-image: url( /common/statics/images/47fb3c_.jpg);"></div>
-<form class="js-search search-form search-form--modal" method="post" action="/search" role="search">
-    <div class="search-form__inner">
-        <div>
-            <div id="search-container" class="ajax_search">
-                <div class="filter_container"><input type="text" value="" autocomplete="off" placeholder="Type then select or enter" name="title" id="search-input">
-                    <ul id="search_filtered" class="search_filtered"></ul>
-                </div>
-                <input type="submit" name="submit" id="searchsubmit" class="searchsubmit" value="">
-            </div>
-        </div>
-    </div></form>
-
-<div class="navi aos-init aos-animate open" data-aos="fade-down">
-    <div class="bt-nav">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
-    </div>
-    <div class="navbar animated fadeInRight">
-        <div class="inner">
-            <nav id="site-navigation" class="main-navigation">
-                <div id="main-menu" class="main-menu-container">
-                    <div class="menu-menu-container">
-                        <ul id="primary-menu" class="menu">
-                            <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17">
-                                <a href="/">首页</a>
-                            </li>
-                            <li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
-                                <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/update.html">更新</a>
-                            </li>
-                            <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
-                                <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/link.html">链接</a>
-                            </li>
-                            <li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-252"><span class="menu-dropdown"><i class="iconfont"></i></span>
-                                <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/archives.html">归档</a>
-                                <ul class="sub-menu">
-                                    <li id="menu-item-165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-165">
-                                        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">theme</a>
-                                    </li>
-                                    <li id="menu-item-163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-163">
-                                        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">Happen</a>
-                                    </li>
-                                    <li id="menu-item-924" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-924">
-                                        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">WeWork</a>
-                                    </li>
-                                    <li id="menu-item-164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-164">
-                                        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">WordPress</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
-                                <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/gustbook.html">留言</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- #site-navigation -->
-        </div>
-    </div>
-</div>
-<div class="hebin aos-init aos-animate" data-aos="fade-down">
-    <i class=" js-toggle-search iconfont"></i>
-</div>
-<header id="masthead" class="overlay animated from-bottom animation-on" itemprop="brand">
-    <div class="site-branding text-center">
-        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">
-            <figure>
-                <img class="custom-logo avatar" src="/common/files/omikron.png">
-            </figure>
-        </a>
-        <h3 class="blog-description"><p>This is beauty</p></h3>
-    </div>
-    <!-- .site-branding -->
-    <div class="decor-part">
-        <div id="particles-js"><canvas class="particles-js-canvas-el" width="1280" height="400" style="width: 100%; height: 100%;"></canvas></div>
-    </div>
-    <div class="animation-header">
-        <div class="decor-wrapper">
-            <svg id="header-decor" class="decor bottom" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-                <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-                <path class="medium left" d="M0 100 L50 50 L0 33.3" fill="rgba(255,255,255, .3)"></path>
-                <path class="medium right" d="M100 100 L50 50 L100 33.3" fill="rgba(255,255,255, .3)"></path>
-                <path class="small left" d="M0 100 L50 50 L0 66.6" fill="rgba(255,255,255, .5)"></path>
-                <path class="small right" d="M100 100 L50 50 L100 66.6" fill="rgba(255,255,255, .5)"></path>
-                <path d="M0 99.9 L50 49.9 L100 99.9 L0 99.9" fill="rgba(255,255,255, 1)"></path>
-                <path d="M48 52 L50 49 L52 52 L48 52" fill="rgba(255,255,255, 1)"></path>
-            </svg>
-        </div>
-    </div>
-</header>
+<jsp:include page="/views/common/header.jsp"></jsp:include>
 <div id="main" class="content">
     <div class="container">
         <article itemscope="itemscope">
             <div class="posts-list js-posts">
+
+                <c:if test="${fn:length(data) == 0}">
+
+                        <h1 class="page-title">以“${title}”为关键字</h1>
+
+
+                        <div class="location">当前位置：
+                            <a href="">首页</a> » 搜索结果 » ${title}
+                        </div>
+
+                        <div class="posts-list js-posts">
+
+                            <div class="archive-post">
+
+                                <div class="type">
+                                    <div class="mask"><i class="iconfont"></i></div>
+                                </div>
+
+                                <h2 class="archive-title" >
+
+					                  暂无搜索结果
+
+                                </h2>
+
+                                <div class="post-category">
+                                    <a href="/" rel="category tag">返回</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="mt+">
+                            <div class="pagination js-pagination">
+
+                                <div class="js-next pagination__load"></div>
+
+                            </div>
+                        </div>
+
+                </c:if>
 
 
                 <c:forEach items="${data}" var="e">
@@ -235,45 +169,97 @@
 
                 #pageLimit li{
                     float: left;
+                    cursor:pointer;
                 }
 
             </style>
 
 
             <script>
-                var totalPage = 10
+                var totalPage = ${pages}   //总共有多少页
+
+                var pageSize = 2;
+
                 $(function(){
-                    var options = {
-                        currentPage: 1,//当前的请求页面。
-                        totalPages: totalPage,//一共多少页。
-                        size:"normal",//应该是页眉的大小。
-                        bootstrapMajorVersion: 3,//bootstrap的版本要求。
-                        alignment:"right",
-                        numberOfPages: 5,//设置控件显示的页码数量.即：类型为"page"的操作按钮的数量。
-                        itemTexts: function (type, page, current) {//如下的代码是将页眉显示的中文显示我们自定义的中文。
-                            switch (type) {
-                                case "first": return "首页";
-                                case "prev": return "上一页";
-                                case "next": return "下一页";
-                                case "last": return "末页";
-                                case "page": return page;
+
+                    if(totalPage != 0){
+                        var options = {
+                            currentPage: <c:if test="${empty pageNum }">1</c:if> ${pageNum}
+                            ,//当前的请求页面。
+                            totalPages: totalPage,//一共多少页。
+                            size:"normal",//应该是页眉的大小。
+                            bootstrapMajorVersion: 3,//bootstrap的版本要求。
+                            alignment:"right",
+                            numberOfPages: 5,//设置控件显示的页码数量.即：类型为"page"的操作按钮的数量。
+                            itemTexts: function (type, page, current) {//如下的代码是将页眉显示的中文显示我们自定义的中文。
+                                switch (type) {
+                                    case "first": return "首页";
+                                    case "prev": return "上一页";
+                                    case "next": return "下一页";
+                                    case "last": return "末页";
+                                    case "page": return page;
+                                }
+                            },//点击事件
+                            onPageClicked:function(event,originalEvent, type,page){
+                                //loadPage(page)
+
+                                post("/",{
+                                    title:$("#search-input").val(),
+                                    pageSize:pageSize,
+                                    pageNum:page
+                                });
+
+                            },onPageChanged:function(event, oldPage, newPage){
+                                $(".pagination .active").addClass("modify");
+                                $("#pageLimit").parent().css("width",500);
+                                resize();
                             }
-                        },//点击事件
-                        onPageClicked:function(event,originalEvent, type,page){
-                            //loadPage(page)
-                            $(".pagination .active").addClass("modify");
-                            $("#pageLimit").parent().css("width",500);
-                            resize();
-                        }
-                    };
-                    $('#pageLimit').bootstrapPaginator(options);
-                    resize();
+                        };
+                        $('#pageLimit').bootstrapPaginator(options);
+                        resize();
+                    }
                 })
 
                 function resize() {
                     var width = $("#pageLimit").width();
                     $("#pageLimit").parent().css("width",width);
                 }
+
+                function post(URL, PARAMS) {
+                    var temp = document.createElement("form");
+                    temp.action = URL;
+                    temp.method = "post";
+                    temp.style.display = "none";
+                    for ( var x in PARAMS) {
+                        var opt = document.createElement("textarea");
+                        opt.name = x;
+                        opt.value = PARAMS[x]; // alert(opt.name)
+                        temp.appendChild(opt);
+                    }
+                    document.body.appendChild(temp);
+                    temp.submit();
+                    return temp;
+                }
+
+
+                $('#searchForm').submit(function (event) {
+                    post("/",{
+                        title:$("#search-input").val(),
+                        pageSize:pageSize,
+                        pageNum:1
+                    });
+                    return false;
+                })
+
+                document.onkeydown = function(event) {
+                    var keyCode = event.keyCode || event.which || event.charCode;
+                    var ctrlKey = event.ctrlKey || event.metaKey;
+                    if(ctrlKey && keyCode == 70) {
+                        $("#searchForm").addClass("is-visible");
+                    }
+                    // event.preventDefault(); // 注意：阻止默认事件不能放在外面，会阻止浏览器或者input/textarea的默认事件，应该放在相应的按键组合中去阻止
+                }
+
 
             </script>
 
@@ -287,34 +273,9 @@
 </div>
 
 <footer id="footer" class="overlay animated from-top">
-    <div class="decor-wrapper">
-        <svg id="footer-decor" class="decor top" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-            <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-            <path class="medium left" d="M0 0 L50 50 L0 66.6" fill="rgba(255,255,255, .3)"></path>
-            <path class="medium right" d="M100 0 L50 50 L100 66.6" fill="rgba(255,255,255, .3)"></path>
-            <path class="small left" d="M0 0 L50 50 L0 33.3" fill="rgba(255,255,255, .5)"></path>
-            <path class="small right" d="M100 0 L50 50 L100 33.3" fill="rgba(255,255,255, .5)"></path>
-            <path d="M0 0 L50 50 L100 0 L0 0" fill="rgba(255,255,255, 1)"></path>
-            <path d="M48 48 L50 51 L52 48 L48 48" fill="rgba(255,255,255, 1)"></path>
-        </svg>
-    </div>
-    <div class="socialize aos-init" data-aos="zoom-in">
-        <li>
-            <a title="weibo" class="socialicon" href="http://yanshi.sucaihuo.com/modals/43/4341/demo/"><i class="iconfont" aria-hidden="true"></i></a>
-        </li>
-        <li class="wechat">
-            <a class="socialicon"><i class="iconfont"></i></a>
-            <div class="wechatimg"><img src="/common/files/49D3746D-7519-B709-83E4-65BD1927C4E7.jpg"></div>
-        </li>
-        <li>
-            <a title="QQ" class="socialicon" href="http://yanshi.sucaihuo.com/modals/43/4341/demo/" target="_blank"><i class="iconfont" aria-hidden="true"></i></a>
-        </li>
-    </div>
-    <div class="cr">
-        Copyright©2018. Design by
-        <a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">sucaihuo</a>
-    </div>
+
+    <jsp:include page="/views/common/footer.jsp"></jsp:include>
+
 
     <script type="text/javascript" src="/common/files/plugins.js"></script>
     <script type="text/javascript" src="/common/files/script.js"></script>

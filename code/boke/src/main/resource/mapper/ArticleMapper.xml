@@ -63,6 +63,10 @@
 
   <select id="selectArticleDtos" resultMap="articleDto">
      select article.*  from article
+       <if test="title != null and title != ''">
+          where title like CONCAT('%',#{title},'%')
+       </if>
+      ORDER BY create_time DESC
   </select>
 
 
@@ -84,7 +88,7 @@
   </insert>
 
   <select id="selectAll" resultType="cn.lovehao.entity.Article">
-      select * from article
+      select * from article ORDER BY create_time DESC
   </select>
 
   <select id="getNextById" resultType="cn.lovehao.entity.Article">

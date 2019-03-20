@@ -3,6 +3,7 @@ package cn.lovehao.service.impl;
 import cn.lovehao.dao.ArticleMapper;
 import cn.lovehao.dto.ArticleDetailsDto;
 import cn.lovehao.dto.ArticleDto;
+import cn.lovehao.dto.ArticleSearchDto;
 import cn.lovehao.entity.Article;
 import cn.lovehao.service.ArticelService;
 import com.github.pagehelper.Page;
@@ -19,11 +20,11 @@ public class ArticelServiceImpl implements ArticelService {
     private ArticleMapper articleMapper;
 
     @Override
-    public Page<ArticleDto> getPageData(Page<ArticleDto> page) {
+    public Page<ArticleDto> getPageData(ArticleSearchDto articleSearchDto) {
         Page<ArticleDto> result = null;
         try{
-            result = PageHelper.startPage(page.getPageNum(),page.getPageSize())
-                    .doSelectPage(()-> articleMapper.selectArticleDtos());
+            result = PageHelper.startPage(articleSearchDto.getPageNum(),articleSearchDto.getPageSize())
+                    .doSelectPage(()-> articleMapper.selectArticleDtos(articleSearchDto));
         } catch (Exception e){
             e.printStackTrace();
         }

@@ -2,6 +2,7 @@ package cn.lovehao.dao;
 
 import cn.lovehao.dto.ArticleDetailsDto;
 import cn.lovehao.dto.ArticleDto;
+import cn.lovehao.dto.ArticleSearchDto;
 import cn.lovehao.entity.Article;
 import com.github.pagehelper.Page;
 
@@ -22,7 +23,7 @@ public interface ArticleMapper {
 
     int updateByPrimaryKey(Article record);
 
-    List<ArticleDto> selectArticleDtos();
+    List<ArticleDto> selectArticleDtos(ArticleSearchDto articleSearchDto);
 
     List<Article> selectAll();
 

@@ -7,23 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="366e76d1-9665-4187-9d95-2596033444d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/aop/PageViewAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/GustbookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/LinkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleSearchDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/GustBookItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/service/GustbookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/GustbookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/gustbook.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/link.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/TestControlelr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/TestControlelr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/TestControlelr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/IndexControlelr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/lovehao/dao/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/dao/ArticleMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/lovehao/service/ArticelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/service/ArticelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/ArticelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/ArticelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/jdbc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/files/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/files/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dao/ArticleMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/ArticleMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resource/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resource/spring-context.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,35 +68,38 @@
     <session id="-300850243">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="AspectJ" value="1" />
-          <entry key="CLASS" value="2" />
+          <entry key="CLASS" value="5" />
           <entry key="CSS" value="7" />
           <entry key="Image" value="18" />
-          <entry key="JAVA" value="47" />
-          <entry key="JSP" value="12" />
+          <entry key="JAVA" value="90" />
+          <entry key="JSP" value="24" />
           <entry key="JavaScript" value="3" />
-          <entry key="XML" value="16" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="AspectJ" value="30" />
           <entry key="CSS" value="76" />
-          <entry key="JAVA" value="1279" />
-          <entry key="JSP" value="1659" />
-          <entry key="PLAIN_TEXT" value="8" />
-          <entry key="SQL" value="4" />
-          <entry key="XML" value="340" />
+          <entry key="JAVA" value="3042" />
+          <entry key="JSP" value="2975" />
+          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="Properties" value="4" />
+          <entry key="SQL" value="6" />
+          <entry key="XML" value="500" />
         </counts>
       </usages-collector>
     </session>
@@ -102,60 +107,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/index.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/controller/LinkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="265" column="37" lean-forward="true" selection-start-line="265" selection-start-column="37" selection-end-line="265" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/controller/TestControlelr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="22" />
-              <folding>
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1259#1260#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/service/ArticelService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="405">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.2/pagehelper-5.1.2.jar!/com/github/pagehelper/Page.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
-              <folding>
-                <element signature="e#2596#2597#0" expanded="true" />
-                <element signature="e#2632#2633#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleDetailsDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -165,19 +125,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Aspect" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>statics</find>
-      <find>USER_ID</find>
-      <find>background-image: url(/common/statics/images/diego-ph-249471-2-800x1000.jpg);</find>
-      <find>/common/statics/images/IMG_0150.jpg</find>
       <find>selectArticleDtos</find>
       <find>result</find>
       <find>mybatis</find>
@@ -202,6 +158,12 @@
       <find>#FFf</find>
       <find>comments-navi</find>
       <find>pageLimit</find>
+      <find>pageNum</find>
+      <find>loadPage</find>
+      <find>search_filtered</find>
+      <find>Copyright©2018. Design by</find>
+      <find>searchForm</find>
+      <find>search</find>
     </findStrings>
     <replaceStrings>
       <replace>/common/statics</replace>
@@ -213,8 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/TestControlelr.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/entity/GeneratorInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/Utils/SetUserAndDateUtils.java" />
@@ -231,27 +191,41 @@
         <option value="$PROJECT_DIR$/src/main/resource/mapper/ArticlePhotoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/entity/Article.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dao/ArticleMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleDetailsDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/dao/ArticleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/mapper/ArticleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/aop/PageViewCalculator.aj" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/aop/impl/PageViewCalculatorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/PageViewCalculatorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/aop/PageViewCalculatorImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/ArticelServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/resource/spring-context.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/service/ArticelService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/aop/PageViewAspect.java" />
         <option value="$PROJECT_DIR$/src/test/resource/spring-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/common/bootstrap-3.3.7/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/common/files/index.css" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleSearchDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/dao/ArticleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/ArticelServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/TestControlelr.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/common/footer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/IndexControlelr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/LinkController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/link.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/common/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/GustBookDto.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/mapper/ArticleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/service/ArticelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/controller/GustbookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/service/GustbookService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/ArticleMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/dto/GustBookItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/GustbookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/gustbook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
       </list>
     </option>
   </component>
@@ -269,8 +243,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="103" />
-    <option name="y" value="151" />
+    <option name="x" value="200" />
+    <option name="y" value="142" />
     <option name="width" value="991" />
     <option name="height" value="685" />
   </component>
@@ -280,8 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,6 +301,43 @@
               <item name="boke" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lovehao" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lovehao" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lovehao" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lovehao" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -344,6 +353,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -352,16 +369,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552903887750" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552986956175" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -371,8 +405,12 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\work\boke\src\main\webapp\common" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\work\boke\code\boke\src\main\webapp\common" />
+      <recent name="E:\work\boke\code\boke\src\main\webapp\common\plugin" />
+      <recent name="E:\work\boke\code\boke\src\main\webapp\views" />
+      <recent name="E:\work\boke\src\test\resource" />
+      <recent name="E:\work\boke\src\main\resource\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.lovehao.dao" />
@@ -381,12 +419,8 @@
       <recent name="cn.lovehao.entity" />
       <recent name="cn.lovehao.controller" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\work\boke\code\boke\src\main\webapp\common" />
-      <recent name="E:\work\boke\code\boke\src\main\webapp\common\plugin" />
-      <recent name="E:\work\boke\code\boke\src\main\webapp\views" />
-      <recent name="E:\work\boke\src\test\resource" />
-      <recent name="E:\work\boke\src\main\resource\mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\work\boke\src\main\webapp\common" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -461,6 +495,22 @@
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.ArticleMapperTest" />
       <option name="METHOD_NAME" value="selectArticelDto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleMapperTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="boke" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.ArticleMapperTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -544,11 +594,13 @@
       <item itemvalue="JUnit.ArticleMapperTest.selectArticelDto" />
       <item itemvalue="JUnit.ArticleMapperTest.pageTest" />
       <item itemvalue="JUnit.ArticleMapperTest.NextAndpre" />
+      <item itemvalue="JUnit.ArticleMapperTest.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArticleMapperTest.NextAndpre" />
+        <item itemvalue="JUnit.ArticleMapperTest.test" />
         <item itemvalue="JUnit.ArticleMapperTest.pageTest" />
+        <item itemvalue="JUnit.ArticleMapperTest.NextAndpre" />
         <item itemvalue="JUnit.ArticleMapperTest.selectArticelDto" />
         <item itemvalue="JUnit.ArticleMapperTest.select" />
       </list>
@@ -569,44 +621,46 @@
       <workItem from="1552642958011" duration="17000" />
       <workItem from="1552643066438" duration="120000" />
       <workItem from="1552870441154" duration="19262000" />
-      <workItem from="1552892872691" duration="10447000" />
+      <workItem from="1552892872691" duration="10616000" />
+      <workItem from="1552955187070" duration="4180000" />
+      <workItem from="1552960673825" duration="22948000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 29m 17s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 08m 51s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 29m 57s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 09m 08s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 31m 23s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 21m 02s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 39m 43s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 21m 33s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 40m 54s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 21m 54s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 43m 00s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 37m 48s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 44m 46s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 39m 02s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_pageTest - 2019.03.15 at 15h 46m 45s.xml">
-      <configuration name="ArticleMapperTest.pageTest" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 39m 31s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_NextAndpre - 2019.03.18 at 10h 01m 36s.xml">
-      <configuration name="ArticleMapperTest.NextAndpre" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 42m 05s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArticleMapperTest_NextAndpre - 2019.03.18 at 10h 02m 11s.xml">
-      <configuration name="ArticleMapperTest.NextAndpre" configurationId="JUnit" />
+    <history-entry file="ArticleMapperTest_test - 2019.03.19 at 15h 43m 28s.xml">
+      <configuration name="ArticleMapperTest.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53231000" />
+    <option name="totallyTimeSpent" value="80528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -618,7 +672,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.32928804" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.33090615" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3290993" />
@@ -630,8 +684,8 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3290993" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.36027715" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" sideWeight="0.49838188" visible="true" weight="0.32794458" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.3487298" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49838188" weight="0.3221709" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
@@ -653,7 +707,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.32928804" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.25080907" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3290993" />
@@ -665,8 +719,8 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3290993" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.36027715" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" sideWeight="0.49838188" visible="true" weight="0.28752887" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.3487298" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49838188" visible="true" weight="0.1674365" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
@@ -720,143 +774,10 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resource/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/TablesMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/CommentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dao/CommentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dao/TablesMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resource/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/entity/ArticlePhoto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="23" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resource/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/ArticlePhotoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dao/ArticlePhotoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/TablesServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="58" column="39" lean-forward="true" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.6.RELEASE/spring-context-4.2.6.RELEASE-sources.jar!/org/springframework/format/annotation/DateTimeFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/controller/GeneratorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
           <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/ArticleMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/ArticleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="94" column="15" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="15" />
-          <folding>
-            <element signature="e#4459#4463#0" expanded="true" />
-            <element signature="e#4632#4636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dao/ArticleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -893,13 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/ArticelServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -946,13 +860,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/common/bootstrap-3.3.7/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5589">
-          <caret line="207" column="117" selection-start-line="201" selection-start-column="32" selection-end-line="207" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/common/plugin/bootstrap-paginator/bootstrap-paginator.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -997,49 +904,229 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleDetailsDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="378">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.2/pagehelper-5.1.2.jar!/com/github/pagehelper/Page.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/common/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/link.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="49" column="124" lean-forward="true" selection-start-line="49" selection-start-column="124" selection-end-line="49" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/common/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="55" column="213" lean-forward="true" selection-start-line="55" selection-start-column="213" selection-end-line="55" selection-end-column="213" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Java/jdk1.8.0_181/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
+          <folding>
+            <element signature="e#2871#2872#0" expanded="true" />
+            <element signature="e#2896#2897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/ArticleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/service/ArticelService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="459">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.2/pagehelper-5.1.2.jar!/com/github/pagehelper/Page.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dao/ArticleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="408">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="629" column="51" lean-forward="true" selection-start-line="629" selection-start-column="51" selection-end-line="629" selection-end-column="51" />
           <folding>
-            <element signature="e#2596#2597#0" expanded="true" />
-            <element signature="e#2632#2633#0" expanded="true" />
+            <element signature="e#25302#25303#0" expanded="true" />
+            <element signature="e#25341#25342#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/controller/TestControlelr.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/GustBookDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="22" />
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/service/GustbookService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="265" column="37" lean-forward="true" selection-start-line="265" selection-start-column="37" selection-end-line="265" selection-end-column="37" />
+        <state relative-caret-position="270">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/ArticleMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="90" column="32" lean-forward="true" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/controller/GustbookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="19" column="72" lean-forward="true" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/GustbookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="108" lean-forward="true" selection-start-line="30" selection-start-column="108" selection-end-line="30" selection-end-column="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/service/impl/ArticelServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/GustBookItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/gustbook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/dto/ArticleSearchDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/controller/IndexControlelr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lovehao/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
           </folding>
         </state>
       </provider>
