@@ -28,6 +28,9 @@ public class GustbookServiceImpl implements GustbookService {
         Map<String,List<GustBookItem>> resultMap = new HashMap<>();
         for(Article article : articleList){
             Date date = article.getCreateTime();
+            if(date == null){
+                continue;
+            }
             LocalDateTime localDateTime = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 
             Month month = localDateTime.getMonth();

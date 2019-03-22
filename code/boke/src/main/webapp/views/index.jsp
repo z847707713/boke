@@ -221,7 +221,7 @@
                 })
 
                 function resize() {
-                    var width = $("#pageLimit").width();
+                    var width = $("#pageLimit").width() + 10;
                     $("#pageLimit").parent().css("width",width);
                 }
 

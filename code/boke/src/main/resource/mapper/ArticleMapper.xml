@@ -13,9 +13,11 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="update_user" jdbcType="VARCHAR" property="updateUser" />
     <result column="theme" jdbcType="INTEGER" property="theme" />
+
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="cn.lovehao.entity.Article">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="markdown" jdbcType="LONGVARCHAR" property="markdown" />
   </resultMap>
   <sql id="Base_Column_List">
     id, title, article_class, author, page_view, outline, create_time, create_user, update_time, 

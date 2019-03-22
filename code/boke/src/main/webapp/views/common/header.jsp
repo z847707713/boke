@@ -14,6 +14,20 @@
     <link rel="stylesheet" type="text/css" href="/common/bootstrap-3.3.7/css/bootstrap.min.css">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/common/plugin/bootstrap-paginator/bootstrap-paginator.min.js" ></script>
+
+    <!-- edit.md -->
+    <link rel="stylesheet" href="/common/plugin/edit.md/css/editormd.css" />
+    <script src="/common/plugin/edit.md/editormd.js"></script>
+    <script src="/common/plugin/edit.md/lib/flowchart.min.js"></script>
+    <script src="/common/plugin/edit.md/lib/jquery.flowchart.min.js"></script>
+    <script src="/common/plugin/edit.md/lib/prettify.min.js"></script>
+    <script src="/common/plugin/edit.md/lib/raphael.min.js"></script>
+    <script src="/common/plugin/edit.md/lib/sequence-diagram.min.js"></script>
+    <script src="/common/plugin/edit.md/lib/underscore.min.js"></script>
+
+
+
+
 </head>
 
 <body class="home blog custom-background round-avatars" itemscope="" itemtype="http://schema.org/Organization" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">

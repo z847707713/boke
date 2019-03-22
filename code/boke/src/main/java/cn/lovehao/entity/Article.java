@@ -27,6 +27,8 @@ public class Article {
 
     protected String content;
 
+    protected String markdown;
+
     public Integer getId() {
         return id;
     }
@@ -121,6 +123,14 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
+    }
+
+    public String getMarkdown() {
+        return markdown;
+    }
+
+    public void setMarkdown(String markdown) {
+        this.markdown = markdown;
     }
 
     @Override
