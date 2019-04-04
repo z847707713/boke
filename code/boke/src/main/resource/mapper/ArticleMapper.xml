@@ -94,11 +94,18 @@
   </select>
 
   <select id="getNextById" resultType="cn.lovehao.entity.Article">
-      select id,title from article
-        where id = (select min(id) from article where id &gt; #{id} )
+      select * from article
+      where create_time
+      &lt;= (select create_time from article where id = #{id})
+      and article.id != #{id}
+      ORDER BY create_time DESC,id DESC limit 0,1
   </select>
   <select id="getPreviousById" resultType="cn.lovehao.entity.Article">
-      select id,title from article where id = (select max(id) from article where id &lt; #{id} )
+     select * from article
+	where create_time
+	 &gt;= (select create_time from article where id = #{id})
+  and article.id != #{id}
+	ORDER BY create_time ,id limit 0,1
   </select>
 
 

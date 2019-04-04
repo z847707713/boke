@@ -102,7 +102,7 @@
 
                                     <div class="post-footer">
                                         <a class="gaz-btn primary" href="/detail/${e.id}">READ MORE</a>
-                                        <span class="total-comments-on-post pull-right"><a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/">31 Comments</a></span>
+                                        <span class="total-comments-on-post pull-right"><a href="http://yanshi.sucaihuo.com/modals/43/4341/demo/"><%--  31 Comments --%></a></span>
                                     </div>
                                 </div>
                             </div>
